@@ -15,11 +15,11 @@ public class SortTask01 {
     public static void main(String[] args) {
 
         int numberN;
-        numberN = ret("введите размер первого массива");
+        numberN = consoleRetrieves("введите размер первого массива");
         int numberM;
-        numberM = ret("введите размер второго массива");
+        numberM = consoleRetrieves("введите размер второго массива");
         int numberK;
-        numberK = ret("введите значение K");
+        numberK = consoleRetrieves("введите значение K");
 
         if (numberK > numberN) {
             System.out.println("невозможно выполнить условие задачи");
@@ -44,7 +44,7 @@ public class SortTask01 {
                 arrayB[i] = rnd.nextInt(10);
                 System.out.print(arrayB[i] + " ");
             }
-            System.out.println("\n массив образованный с помощью arrayList");
+            System.out.println("\n последовательность образованная с помощью arrayList");
 
             ArrayList arrays = new ArrayList();
             for (int i = 0; i < numberK; i++) {
@@ -60,16 +60,18 @@ public class SortTask01 {
         }
     }
 
-    public static int ret(String message) {
+    public static int consoleRetrieves(String message) {
         @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
-        int d;
-        System.out.println(message);
-        while (!sc.hasNextInt()) {
-            sc.next();
-            System.out.println(message);
-        }
-        d = sc.nextInt();
-        return d;
+        int number;
+        do {
+            System.out.println(message + "\nВведите положительное число!");
+            while (!sc.hasNextInt()) {
+                System.out.println("это не число!");
+                sc.next();
+            }
+            number = sc.nextInt();
+        } while (number <= 0);
+        return number;
     }
 }
