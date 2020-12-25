@@ -11,18 +11,14 @@ public class SortTask03 {
     public static void main(String[] args) {
 
         int[] arrayA;
-        arrayA = new int[10];
+        arrayA = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println("Исходный массив\t");
         for (int i = 0; i < arrayA.length; i++) {
-            Random rnd = new Random();
-            arrayA[i] = rnd.nextInt(15);
             System.out.print(arrayA[i] + "\t");
         }
 
         int numericTemp;
         int numericMax;
-        int counter;
-        counter = 0;
 
         for (int i = 0; i < arrayA.length; i++) {
             numericTemp = i;
@@ -36,18 +32,11 @@ public class SortTask03 {
             }
             arrayA[numericTemp] = arrayA[i];
             arrayA[i] = numericMax;
-            counter++;
-
-            System.out.println("\n Массив после переставновки " + counter + "\t");
-            for (int k = 0; k < arrayA.length; k++) {
-                System.out.print(arrayA[k] + "\t");
-            }
         }
 
         System.out.println("\n Итоговый массив ");
         for (int i = 0; i < arrayA.length; i++) {
             System.out.print(arrayA[i] + "\t");
         }
-        System.out.println("\nВыполнено перестановок : "+counter);
     }
 }
