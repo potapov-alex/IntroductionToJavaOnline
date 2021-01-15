@@ -17,6 +17,5 @@ public class LineTask06 {
 		} else {
 			System.out.println("не принадлежит");
 		}
-
 	}
 }

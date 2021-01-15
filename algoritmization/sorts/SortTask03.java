@@ -1,7 +1,5 @@
 package by.epam.java.algoritmization.sorts;
 
-import java.util.Random;
-
 /**
  * @author potap; Дана последовательность a1<=a2<=...<=an.
  * Написать алгоритм сортировки выбором

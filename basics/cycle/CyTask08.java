@@ -11,8 +11,8 @@ public class CyTask08 {
 
 	public static void main(String[] args) {
 
-		int n = retriveScanner("Веедите первое число");
-		int m = retriveScanner("Введите второе число");
+		int n = retrieveScanner("Веедите первое число");
+		int m = retrieveScanner("Введите второе число");
 
 		int quotientN;
 		int quotientM;
@@ -32,7 +32,7 @@ public class CyTask08 {
 		}
 	}
 
-	public static int retriveScanner (String message) {
+	public static int retrieveScanner(String message) {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		int number;
