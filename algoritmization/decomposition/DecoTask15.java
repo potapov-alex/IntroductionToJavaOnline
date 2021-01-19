@@ -1,6 +1,7 @@
 package by.epam.java.algoritmization.decomposition;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * @author potap;
@@ -9,7 +10,6 @@ import java.util.ArrayList;
  */
 
 public class DecoTask15 {
-
 
     //method converts the digits of a number to an array
     public static int[] getCountDigits(int number) {
@@ -22,22 +22,23 @@ public class DecoTask15 {
         return result;
     }
 
-
+    //method check numbers grow
     public static boolean trueGrowingNumber(int[] digitsArray) {
         boolean result;
-        result = false;
+        result = true;
         int i;
         for (i = 1; i < digitsArray.length; ++i)
-            if (digitsArray[i - 1] + 1 == digitsArray[i]) {
-                result = true;
+            if (digitsArray[i - 1] + 1 != digitsArray[i]) {
+                result = false;
                 break;
             }
         return result;
     }
 
     public static void main(String[] args) {
+       //take range from 1 to max int 2147483647
         int numberN;
-        numberN = 125;
+        numberN = 2_147_483_647;
 
         ArrayList realGrowNumber = new ArrayList();
 
